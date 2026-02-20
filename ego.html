@@ -1,0 +1,300 @@
+<
+    }
+    .board {
+      height: 500px;
+      width: 500px;
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      grid-template-rows: repeat(3, 150px);
+      gap: 0;
+      border: 3px solid #000;
+    }
+    .zone {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .zone.red { 
+      background: #ff1a01; 
+       height: 199px;
+     width: 199px;  
+     border-right: 2px solid black;   
+      border-bottom: 2px solid black;
+    }
+    
+    .zone.green { 
+      background: green; 
+     height: 199px;
+     width: 199px;  
+     margin-left: -1px;
+     border-left: 2px solid black;   
+      border-bottom: 2px solid black;    
+}
+    .zone.blue {
+       background: blue;
+       height: 199px;
+     width: 199px;  
+     border-top: 2px solid black;   
+      border-right: 2px solid black;
+      
+      }
+    .zone.yellow { 
+        background: yellow;
+       height: 199px;
+     width: 199px;  
+     margin-left: -1px;
+     border-left: 2px solid black;   
+      border-top: 2px solid black;
+        
+
+        }  
+  .zone .home {
+      background: hsl(0, 0%, 100%);
+      width: 80%;
+      height: 80%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .home .token {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+    .center {
+      position: sticky;
+      margin-top: 51px;
+      margin-left: 50px;
+      height: 100px;  
+      width: 100px;
+      background: conic-gradient(green 12.5%, yellow 12.5% 37.5%, blue 37.5% 62.5%, #ff1a01 62.5% 87.5%, green 87.5% 100%);
+      
+    }
+    .path {
+      margin-left:50px;
+      margin-top: 1.5px;
+      height: 90px;
+      width: 90px; 
+      background: #fff;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+    .path2 {
+       height: 80px;
+      width: 80px; 
+       margin-top: 50px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+     .cell {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+    .star { color: #000; }
+    h3 {
+      position: absolute;
+      top: -40px;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+    #rt{
+      transform: rotate(90deg);
+    }
+    #arrow-yellow{
+      transform: rotate(90deg);
+      color: yellow;
+      font-weight: bolder;
+      font-size: 30px;
+      
+    }
+    #arrow-red{
+      transform: rotate(270deg);
+      color: red;
+      font-weight: bolder;
+      font-size: 30px;
+      
+    }
+    #arrow-green{
+      color: green;
+      font-weight: bolder;
+      font-size: 30px;
+      
+    }
+    #arrow-blue{
+      transform: rotate(180deg);
+      color: blue;
+      font-weight: bolder;
+      font-size: 30px;
+    }
+    .material-symbols-outlined{
+      font-size: 55px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div style="position: relative;">
+    <div class="board">
+      <div class="zone red">
+        <div class="home">
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+        </div>
+      </div>
+      <div class="path">
+        <div class="cell star"></div>
+        <div class="cell" id="arrow-green"><i class="fa-solid fa-turn-down"></i></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" style="background-color: green;"></div>
+        <div class="cell star" style="background-color: green;"> <i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell"><i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell" style="background-color: green;"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" style="background-color: green;"></div>
+        <div class="cell star"></div>
+        <div class="cell"></div>
+        <div class="cell" style="background-color: green;"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" style="background-color: green;"></div>
+        <div class="cell star"></div>
+      </div>
+      <div class="zone green">
+        <div class="home">
+          <div class="token"  id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"  id="rt" ><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token" id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"  id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+        </div>
+      </div>
+      <div class="path2">
+        <div class="cell star"></div>
+        <div class="cell" style="background-color: red;"> <i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell star"></div>
+        <div class="cell" id="arrow-red"><i class="fa-solid fa-turn-down"></i></div>
+        <div class="cell"  style="background-color: red;"></div>
+        <div class="cell"  style="background-color: red;"></div>
+        <div class="cell"  style="background-color: red;"></div>
+        <div class="cell"  style="background-color: red;"></div>
+        <div class="cell"  style="background-color: red;"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell star"><i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell star"></div>
+      </div>
+      <div class="center"></div>
+      <div class="path2">
+       <div class="cell star"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"><i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" style="background-color: yellow;"></div>
+        <div class="cell" style="background-color: yellow;"></div>
+        <div class="cell" style="background-color: yellow;"></div>
+        <div class="cell" style="background-color: yellow;"></div>
+        <div class="cell" style="background-color: yellow;"></div>
+        <div class="cell"><i id = "arrow-yellow" class="fa-solid fa-turn-down"></i></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell star" style="background-color: yellow;"><i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell star"></div>
+      </div>
+      <div class="zone blue">
+        <div class="home">
+          <div class="token"  id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"  id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"  id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"  id="rt"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+        </div>
+      </div>
+      <div class="path">
+       <div class="cell"></div>
+        <div class="cell" style="background-color: blue;"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"  style="background-color: blue;"></div>
+        <div class="cell"></i></div>
+        <div class="cell"></div>
+        <div class="cell"  style="background-color: blue;"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"  style="background-color: blue;"></div>
+        <div class="cell star"><i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell"  style="background-color: blue;"> <i class="fa-solid fa-star-of-david"></i></div>
+        <div class="cell"  style="background-color: blue;"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" id="arrow-blue"><i class="fa-solid fa-turn-down"></i></div>
+        <div class="cell"></i></div>
+      </div>
+      <div class="zone yellow">
+        <div class="home">
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+          <div class="token"><span class="material-symbols-outlined">
+swap_vertical_circle
+</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
